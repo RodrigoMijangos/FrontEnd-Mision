@@ -1,0 +1,116 @@
+
+/*Estilos de Header*/
+
+body{
+    background-color: #FFD6EA;
+}
+
+nav #header{
+    position: relative;
+    background-color: #FFD6EA; 
+    width: 100%;
+}
+
+#h_banner_nav{
+    position: relative;
+    top: 50%;
+    left: 35%;
+}
+
+nav #header ul {
+    position: inherit;
+    margin: 0 auto;
+    background-color: #f0b5d1;
+}
+
+nav #header ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 15px;
+}
+
+nav #header ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    background-color: #c4578a;
+}
+
+section{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #faeff4;
+    box-shadow: 10px 10px 5px rgb(170, 167, 167);
+}
+
+#sabores .sabores_tablas{
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 40%;
+
+}
+
+#sabores #tabla_masas{
+    margin-right: 10px;
+}
+
+#sabores #tabla_glaseados{
+    margin-left: 10px;
+}
+
+section table{
+    position: inherit;
+    width: 40%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table tr:hover{
+    background-color: #ddd;
+}
+
+table tr th{
+    background-color: #c4578a;
+}
+
+table tr th,
+table tr td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+form {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+form #select{
+    margin: 15px auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+form #select input{
+    max-width: 20px;
+}
+form textarea{
+    margin: 20px auto;
+    width: 500px;
+    height: 100px;
+    display: block;
+    resize: none;
+}

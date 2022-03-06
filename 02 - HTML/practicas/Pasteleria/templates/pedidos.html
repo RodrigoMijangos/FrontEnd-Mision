@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sue&ntilde;os Cremosos - Pedidos</title>
+        
+        <link rel="icon" href="../logo.ico">
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <script>
+            const sabores = [
+                "Chocolate", "Vainilla", "Fresa"
+            ];
+            const adornos = [
+                "Velas Numeros", "Velas Sencillas", "Muñeco Vengador"
+            ];
+            const decoracion = [
+                "Geometrica", "3D", "Floral"
+            ];
+            const valores = [
+                20, 15, 15
+            ]
+
+            function llenarmas(){
+                const sel = document.getElementById("masas_select");
+                for(i = 0; i<sabores.length; i++){
+                    let op = document.createElement("option");
+                    op.value = sabores[i]
+                    if(i == 0)
+                        op.selected = true;
+                    op.textContent = sabores[i]
+
+                    sel.appendChild(op);
+                }
+
+                const gla = document.getElementById("glaseados_select");
+                for(i = 0; i<sabores.length; i++){
+                    let op = document.createElement("option");
+                    op.value = sabores[i]
+                    if(i == 0)
+                        op.selected = true;
+                    op.textContent = sabores[i]
+
+                    gla.appendChild(op);
+                }
+
+                const dec = document.getElementById("deco")
+                for(i = 0; i<decoracion.length; i++){
+                    let op = document.createElement("option");
+                    op.value = decoracion[i]
+                    if(i == 0)
+                        op.selected = true;
+                    op.textContent = decoracion[i]
+
+                    dec.appendChild(op);
+                }
+
+                const ad = document.getElementById("adorno_select")
+                for(i = 0; i<decoracion.length; i++){
+                    let op = document.createElement("option");
+                    op.value = adornos[i]
+                    if(i == 0)
+                        op.selected = true;
+                    op.textContent = adornos[i]
+
+                    ad.appendChild(op);
+                }
+            }
+
+        </script>
+    
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <div id="header">
+                    <img src="../images/h_banner.png" id="h_banner_nav">
+                    <ul id="nav_list">
+                        <li><a href="../index.html">PASTELES</a></li>
+                        <li><a href="../templates/decoraciones.html">DECORACIONES</a></li>
+                        <li><a>PEDIDOS</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="form">
+
+                <form>
+                    <div id="select">
+                        <label>Sabor de Masa</label>
+                        <Select id="masas_select"></Select>
+                        <label>Sabor de Glaceado</label>
+                        <select id="glaseados_select"></select>
+                        <label>Adorno</label>
+                        <select id="adorno_select"></select>
+                        <label>Decoracion</label>
+                    <select id="deco"></select>
+                    </div>
+                    <label>Describa como quiere el pastel</label>
+                    <textarea placeholder="Escriba aquí sus detalles"></textarea>
+                    <label>Nombre</label>
+                    <input type="text" maxlength="100">
+                    <label>Teléfono</label>
+                    <input type="tel" maxlength="10">
+                    <label>Correo</label>
+                    <input type="email" maxlength="50">
+                    <br>
+                    <br>
+                    <input type="button" value="Guardar">
+                </form>
+                <script>
+                    llenarmas();
+                    llenargla();
+                </script>
+            </section>
+        </header>
+    </body>
+</html>
